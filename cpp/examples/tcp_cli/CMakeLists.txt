@@ -1,0 +1,10 @@
+find_package(fmt CONFIG)
+find_package(spdlog CONFIG)
+find_package(msgpack CONFIG)
+find_package(nlohmann_json CONFIG)
+find_package(Boost REQUIRED)
+find_package(OpenCV REQUIRED)
+
+add_executable(TcpCli src/main.cpp src/Conversion.cpp src/TcpConnection.cpp)
+target_link_libraries(TcpCli PUBLIC project_options project_warnings Dataspree::Inference msgpackc-cxx::msgpackc-cxx nlohmann_json::nlohmann_json opencv::opencv Boost::boost ${OpenCV_LIBS} PRIVATE fmt::fmt spdlog::spdlog ${Boost_LIBRARIES} Boost::program_options)
+target_include_directories(TcpCli PRIVATE "${CMAKE_BINARY_DIR}/configured_files/include" PUBLIC include "${PROJECT_SOURCE_DIR}/include")

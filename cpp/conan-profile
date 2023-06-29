@@ -1,0 +1,12 @@
+[conf]
+tools.system.package_manager:mode=install
+tools.system.package_manager:sudo=True
+
+[settings]
+os={{ {"Darwin": "Macos"}.get(platform.system(), platform.system()) }}
+arch=armv8
+build_type=Release
+compiler=clang
+compiler.cppstd=gnu20
+compiler.version=11
+compiler.libcxx=libstdc++

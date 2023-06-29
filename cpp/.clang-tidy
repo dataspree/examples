@@ -1,0 +1,26 @@
+---
+Checks: "*, 
+        -cppcoreguidelines-non-private-member-variables-in-classes,
+        -misc-non-private-member-variables-in-classes,
+          -zircon-*,
+          -fuchsia-trailing-return,
+          -fuchsia-default-arguments,
+          -fuchsia-default-arguments-declarations,
+          -fuchsia-overload-operator,
+          -fuchsia-default-arguments-calls,
+          -llvmlibc-implementation-in-namespace,
+          -readability-magic-numbers,
+          -llvm-header-guard,
+          -llvmlibc-restrict-system-libc-headers,
+          -llvmlibc-callee-namespace,
+          -readability-else-after-return,
+          -readability-function-cognitive-complexity,
+          -cppcoreguidelines-avoid-magic-numbers,
+          -google-default-arguments,
+          -altera-id-dependent-backward-branch,
+          -altera-unroll-loops, "
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+FormatStyle:     none
+  
+
